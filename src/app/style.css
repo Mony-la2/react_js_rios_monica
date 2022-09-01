@@ -1,8 +1,17 @@
 body {
-    background-color: powderblue;
+    background-color: powderblue !important;
 }
 
 .imagenLogo {
     height: 50px;
     margin-right: 10px;
+}
+
+.logoCarrito {
+    height: 50px;
+}
+
+.textoPrincipal {
+    text-align: center;
+    margin-top: 10px;
 }
