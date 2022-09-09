@@ -18,9 +18,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <div className='row'>
             <div className="col-3">
 
-                <button onClick={() => decrement()} type="button" class="btn btn-dark">-</button>
+                <button onClick={() => decrement()} type="button" className="btn btn-dark">-</button>
                 <h1>{count}</h1>
-                <button onClick={() => increment()} type="button" class="btn btn-dark">+</button>
+                <button onClick={() => increment()} type="button" className="btn btn-dark">+</button>
 
             </div>
         </div>
