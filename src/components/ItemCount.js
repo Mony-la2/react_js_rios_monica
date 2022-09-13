@@ -15,13 +15,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         setCounter(count + 1)
     }
     return (
-        <div className='row'>
-            <div className="col-3">
-
-                <button onClick={() => decrement()} type="button" class="btn btn-dark">-</button>
-                <h1>{count}</h1>
-                <button onClick={() => increment()} type="button" class="btn btn-dark">+</button>
-
+        <div className="m-auto">
+            <div className="px-2 py-2 d-flex justify-content-center">
+                <button onClick={() => decrement()} type="button" className="btn btn-dark">-</button>
+                <p className="m-1 p-1">{count} </p>
+                <button onClick={() => increment()} type="button" className="btn btn-dark">+</button>
+                <button onClick={() => onAdd(count)} type="button" className="btn btn-dark ms-3">Agregar carrito</button>
             </div>
         </div>
     )
