@@ -1,16 +1,21 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import ItemCount from "./ItemCount";
+
 
 const Item = ({ item }) => {
     const [prod, setProd] = useState([]);
 
     useEffect(() => {
-        console.log("diego", item);
         setProd(item);
     }, [])
 
+    const onAdd = (count) => {
+        console.log(count)
+    }
+
     return (
-        <div> {prod.title} {prod.price} </div>
+        <ItemCount stock="5" initial="1" onAdd={onAdd} />
     )
 }
 
