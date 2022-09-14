@@ -20,7 +20,7 @@ const Item = ({ item }) => {
     return (
         <>
             <Row className='justify-content-center ms-4 my-4'>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '22rem' }}>
                     <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/${prod.pictureUrl}`} />
                     <Card.Body>
                         <Card.Title>{prod.name}</Card.Title>
