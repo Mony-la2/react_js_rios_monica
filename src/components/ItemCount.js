@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import ItemDetailContainer from "./ItemDetailContainer";
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -22,7 +21,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <p className="m-1 p-1">{count} </p>
                 <button onClick={() => increment()} type="button" className="btn btn-dark">+</button>
                 <button onClick={() => onAdd(count)} type="button" className="btn btn-dark ms-3">Agregar carrito</button>
-                <ItemDetailContainer />
+
+                {/* <ItemDetailContainer /> */}
             </div>
         </div>
     )

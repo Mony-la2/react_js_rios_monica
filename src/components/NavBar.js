@@ -9,8 +9,8 @@ const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
             <Container>
-                <Navbar.Brand href="#home">
-                    <a href="#">
+                <Navbar.Brand href="/">
+                    <a href="/">
                         <img src={foto} className="imagenLogo" />
 
                     </a>
@@ -21,10 +21,10 @@ const NavBar = () => {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets1">EcuPro</Nav.Link>
-                        <Nav.Link href="#deets2">Funcionamiento</Nav.Link>
-                        <Nav.Link href="#deets3">Cursos/Presentación</Nav.Link>
-                        <Nav.Link href="#deets4">Contacto</Nav.Link>
+                        <Nav.Link href="/category/equipos">EcuPro</Nav.Link>
+                        <Nav.Link href="/category/funcionalidades">Funcionamiento</Nav.Link>
+                        <Nav.Link href="/category/cursos">Cursos/Presentación</Nav.Link>
+                        <Nav.Link href="/category/contactos">Contacto</Nav.Link>
 
                     </Nav>
                 </Navbar.Collapse>

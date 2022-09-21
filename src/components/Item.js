@@ -4,6 +4,7 @@ import ItemCount from "./ItemCount";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
+import { Link } from 'react-router-dom';
 
 
 const Item = ({ item }) => {
@@ -29,9 +30,11 @@ const Item = ({ item }) => {
                         </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
+                        <ListGroup.Item>{prod.category}</ListGroup.Item>
                         <ListGroup.Item>${prod.price}</ListGroup.Item>
                     </ListGroup>
                     <ItemCount stock="5" initial="1" onAdd={onAdd} />
+                    <Link to={`/item/${prod.id}`} type="button" className="btn btn-dark ms-3">Detalle</Link>
                 </Card>
             </Row>
         </>
