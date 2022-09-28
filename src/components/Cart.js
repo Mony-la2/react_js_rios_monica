@@ -1,12 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../app/Provider'
+import ItemCart from './ItemCart';
 
 const Cart = () => {
-    const { cart } = useCartContext();
-
+    const { cart, precioFinal } = useCartContext();
+    console.log(cart)
     return (
         <>
-            <div>Compra realizada</div>
+            {
+                cart.length == 0 ? <h1>No hay productos <Link to='/'>Buscar Productos</Link></h1>
+                    : cart.map(prod => <ItemCart product={prod} />)
+            }
+
+            <h2>
+                Total:$ {precioFinal()}
+            </h2>
+
         </>
     )
 }

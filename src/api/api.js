@@ -34,12 +34,13 @@ export const getProductos = () => {
 };
 
 class item {
-    constructor(id, brand, model, description, pictureUrl) {
+    constructor(id, brand, model, description, pictureUrl, price) {
         this.id = id;
         this.brand = brand;
         this.model = model;
         this.description = description
         this.pictureUrl = pictureUrl;
+        this.price = price
     }
 }
 
@@ -47,11 +48,11 @@ export const getItem = () => {
     const task = new Promise((ok, error) => {
         setTimeout(() => {
             const item1 = [
-                new item(1, "EcuPro", "powerbv 1", "Equipo 1", "logoEcupro.jpg"),
-                new item(2, "EcuPro", "powerbv 2", "Equipo 2", "logoEcupro.jpg"),
-                new item(3, "EcuPro", "powerbv 3", "Equipo 3", "logoEcupro.jpg"),
-                new item(4, "EcuPro", "powerbv 4", "Equipo 4", "logoEcupro.jpg"),
-                new item(5, "EcuPro", "powerbv 5", "Equipo 5.", "logoEcupro.jpg")]
+                new item(1, "EcuPro", "powerbv 1", "Equipo 1", "logoEcupro.jpg", 50),
+                new item(2, "EcuPro", "powerbv 2", "Equipo 2", "logoEcupro.jpg", 60),
+                new item(3, "EcuPro", "powerbv 3", "Equipo 3", "logoEcupro.jpg", 70),
+                new item(4, "EcuPro", "powerbv 4", "Equipo 4", "logoEcupro.jpg", 80),
+                new item(5, "EcuPro", "powerbv 5", "Equipo 5.", "logoEcupro.jpg", 90)]
             ok(item1);
         }, 0);
     });
