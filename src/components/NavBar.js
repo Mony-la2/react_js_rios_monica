@@ -1,39 +1,23 @@
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import foto from '../assets/logoEcuPro.jpg';
-import CartWidget from './CartWidget';
+import { NavLink } from "react-router-dom";
+
+
 
 const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
-            <Container>
-                <Navbar.Brand href="/">
-                    <a href="/">
-                        <img src={foto} className="imagenLogo" />
+        <div className='container-nav'>
 
-                    </a>
-                    EcuPro
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                    </Nav>
-                    <Nav>
-                        <Nav.Link href="/category/equipos">EcuPro</Nav.Link>
-                        <Nav.Link href="/category/funcionalidades">Funcionamiento</Nav.Link>
-                        <Nav.Link href="/category/cursos">Cursos/Presentación</Nav.Link>
-                        <Nav.Link href="/category/contactos">Contacto</Nav.Link>
+            <div>
+                <ul>
+                    <li><NavLink className='link-nav' to="/category/equipos">EcuPro</NavLink></li>
+                    <li><NavLink className='link-nav' to="/category/funcionalidades">Funcionamiento</NavLink></li>
+                    <li><NavLink className='link-nav' to="/category/cursos">Cursos/Presentación</NavLink></li>
+                    <li><NavLink className='link-nav' to="/category/contactos">Contacto</NavLink></li>
 
-                    </Nav>
-                </Navbar.Collapse>
-                <CartWidget />
-            </Container>
-        </Navbar>
-
-
-    )
+                </ul>
+            </div>
+        </div>
+    );
 }
 
 export default NavBar;

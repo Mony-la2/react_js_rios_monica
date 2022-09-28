@@ -3,10 +3,10 @@ import { useState } from 'react'
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-    const [count, setCounter] = useState(parseInt(initial))
+    const [count, setCounter] = useState(parseInt(initial));
 
     const decrement = () => {
-        if (count == 0) return
+        if (count === 0) return
         setCounter(count - 1)
     }
     const increment = () => {
