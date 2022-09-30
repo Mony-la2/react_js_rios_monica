@@ -11,7 +11,7 @@ const ItemCart = ({ product }) => {
     return (
         <Row className='justify-content-center ms-4 my-4'>
             <Card style={{ width: '22rem' }}>
-                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/${product.pictureUrl}`} />
+                <Card.Img variant="top" src={`${product.pictureUrl}`} />
                 <Card.Body>
                     <Card.Title>Marca: {product.brand}</Card.Title>
                     <Card.Text>

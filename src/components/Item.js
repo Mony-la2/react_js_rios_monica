@@ -17,7 +17,7 @@ const Item = ({ item }) => {
         <>
             <Row className='justify-content-center ms-4 my-4'>
                 <Card style={{ width: '22rem' }}>
-                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/${prod.pictureUrl}`} />
+                    <Card.Img variant="top" src={`${prod.pictureUrl}`} />
                     <Card.Body>
                         <Card.Title>{prod.name}</Card.Title>
                         <Card.Text>
@@ -29,7 +29,7 @@ const Item = ({ item }) => {
                         <ListGroup.Item>${prod.price}</ListGroup.Item>
                     </ListGroup>
 
-                    <Link to={`/item/${prod.id}`} type="button" className="btn btn-dark ms-3">Detalle</Link>
+                    <Link to={`/item/${prod.id}`} type="button" className="btn btn-dark ms-3 my-4">Detalle</Link>
                 </Card>
             </Row>
         </>
