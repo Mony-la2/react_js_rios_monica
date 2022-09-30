@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
             .catch(() => {
                 console.log("Task error");
             })
-    }, []);
+    }, [id]);
     return (
         <ItemDetail item={item} />
     )

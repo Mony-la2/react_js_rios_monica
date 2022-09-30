@@ -1,24 +1,19 @@
-
-import { NavLink } from "react-router-dom";
-import CartWidget from "./CartWidget";
-import { BrowserRouter } from 'react-router-dom'
+import foto from '../assets/logoEcuPro.jpg';
+import { Link } from "react-router-dom";
 
 
 
 const NavBar = () => {
     return (
-        <div className='container-nav'>
-
-            <div>
-                <ul>
-                    <li><NavLink className='link-nav' to="/category/equipos">EcuPro</NavLink></li>
-                    <li><NavLink className='link-nav' to="/category/funcionalidades">Funcionamiento</NavLink></li>
-                    <li><NavLink className='link-nav' to="/category/cursos">Cursos/Presentación</NavLink></li>
-                    <li><NavLink className='link-nav' to="/category/contactos">Contacto</NavLink></li>
-                    <CartWidget />
-                </ul>
+        <nav className="navbar navbar-dark bg-dark">
+            <div className="container">
+                <Link to="/"><img src={foto} className="imagenLogo" /></Link>
+                <Link className="btn btn-outline-primary" to="/category/games">Juegos</Link>
+                <Link className="btn btn-outline-primary" to="/category/console">Consolas</Link>
+                <Link className="btn btn-outline-primary" to="/category/audio">Audio</Link>
+                <Link className="btn btn-outline-primary" to="/category/tv">Tv</Link>
             </div>
-        </div>
+        </nav>
     );
 }
 
