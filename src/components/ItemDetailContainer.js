@@ -3,6 +3,7 @@ import { getItem } from '../api/api';
 import ItemDetail from './ItemDetail';
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
+import { getItems, getItemsDetails } from "./../app/api"
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
@@ -10,8 +11,10 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        getItem().then((items) => {
-            setItem(items.find(item => item.id === parseInt(id)));
+
+
+        getItemsDetails(id).then((item) => {
+            setItem(item);
         })
             .catch(() => {
                 console.log("Task error");

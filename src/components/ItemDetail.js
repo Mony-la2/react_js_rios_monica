@@ -22,7 +22,7 @@ const ItemDetail = ({ item }) => {
 
             <Row className='justify-content-center ms-4 my-4'>
                 <Card style={{ width: '22rem' }}>
-                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/${item.pictureUrl}`} />
+                    <Card.Img variant="top" src={`${item.pictureUrl}`} />
                     <Card.Body>
                         <Card.Title>{item.brand}</Card.Title>
                         <Card.Text>
