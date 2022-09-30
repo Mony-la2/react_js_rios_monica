@@ -9,12 +9,12 @@ const App = () => {
 
   return (
 
-    <Router forceRefresh={true}>
-      <Provider>
+    <Provider>
+      <Router>
         <NavBar />
         <RouterApp />
-      </Provider>
-    </Router>
+      </Router>
+    </Provider>
 
   )
 }

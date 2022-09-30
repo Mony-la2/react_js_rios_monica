@@ -8,7 +8,7 @@ const ItemList = ({ items }) => {
         <CardGroup>
             {items.map((prod) => {
                 return (
-                    <Item item={prod} />
+                    <Item key={prod.id} item={prod} />
                 )
 
             })}

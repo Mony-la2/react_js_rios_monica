@@ -27,7 +27,7 @@ const ItemListContainer = ({ greetings }) => {
                     console.log("Task error");
                 })
         }
-    }, []);
+    }, [categoryId]);
 
     return (
         <>
