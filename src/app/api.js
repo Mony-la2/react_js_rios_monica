@@ -3,7 +3,7 @@ import { db } from './firebase';
 
 // CREATE
 export const createItem = async (obj) => {
-    const colRef = collection(db, 'productos');
+    const colRef = collection(db, 'compras');
     const data = await addDoc(colRef, obj);
     return data.id;
 }
