@@ -1,6 +1,6 @@
 # Bienvenido a mi primera App en React
 
-![](funcionamiento.gif)
+![](Funcionamiento.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
