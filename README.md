@@ -19,9 +19,9 @@ En esta seccion se encuentran disponible los mejores equipos de sonidos del mund
 
 ### Juegos
 
-**Note: Prestar atencion a juegos en version digital y fisica**
-
 En esta seccion encontraras los ultimos juegos para jugar en todas las consolas tambien disponible en nuestro sitio web.
+
+**Nota: Prestar atencion a juegos en version digital y fisica**
 
 ### Tecnologia
 
