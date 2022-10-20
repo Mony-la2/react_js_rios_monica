@@ -1,12 +1,12 @@
 import React from 'react';
-import { getItem } from '../api/api';
 import ItemDetail from './ItemDetail';
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { getItems, getItemsDetails } from "./../app/api"
+import { getItems, getItemsDetails } from "./../app/api";
+import loading from "../assets/Dual Ring-1s-200px.svg"
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([]);
+    const [item, setItem] = useState();
 
     const { id } = useParams();
 
@@ -21,7 +21,13 @@ const ItemDetailContainer = () => {
             })
     }, [id]);
     return (
-        <ItemDetail item={item} />
+        <>
+            {
+                !item ? <img src={loading} className="loading" />
+                    : < ItemDetail item={item} />
+            }
+        </>
+
     )
 }
 

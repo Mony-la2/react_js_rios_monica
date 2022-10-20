@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { getProductos } from "../api/api";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { getItems, getItemsByCondition } from "./../app/api"
+import loading from "../assets/Dual Ring-1s-200px.svg"
 
 
 const ItemListContainer = ({ greetings }) => {
-    const [productos, setProds] = useState([]);
+    const [productos, setProds] = useState();
 
     const { categoryId } = useParams();
 
@@ -34,7 +34,12 @@ const ItemListContainer = ({ greetings }) => {
             <h2 className={"textoPrincipal"} >
                 {greetings}
             </h2>
-            <ItemList items={productos} />
+
+            {
+                !productos ? <img src={loading} className="loading" />
+                    : <ItemList items={productos} />
+            }
+
         </>
     )
 }
