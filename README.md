@@ -1,10 +1,9 @@
-# Bienvenido a mi primera App en React
+# Bienvenido a Mundo Gammer una web donde pondra comprar productos de Tv, Audio, Consolas y Juegos
 
 ![](Funcionamiento.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Podes encontrar lo ultimo en tecnologia y comprar facilmente usando un sistema de carrito. Al finalizar la comprar recibiras un ID de compra
+con el cual podras reclamar tu producto en cualquier centro de canje de Mundo Gammer.
 
 In the project directory, you can run:
 
