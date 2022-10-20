@@ -28,7 +28,7 @@ const ItemCart = ({ product }) => {
                     </Card.Text>
                 </Card.Body>
 
-                <button onClick={() => removeItem(product.id)}
+                <button onClick={() => removeItem(product.id)} className="mb-4"
                 >Eliminar</button>
 
             </Card>

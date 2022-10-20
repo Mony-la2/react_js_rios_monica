@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import { createItem } from "./../app/api"
 
 const Cart = () => {
-    const { cart, precioFinal } = useCartContext();
+    const { cart, precioFinal, clear } = useCartContext();
     const [form, setForm] = useState({
         formName: '',
         formPhone: '',
@@ -31,7 +31,8 @@ const Cart = () => {
         }
 
         createItem(obj).then((id) => {
-            alert("El id de compra es: " + id)
+            alert("Compra Exitosa su ID de compra es: " + id)
+            clear();
         })
             .catch(() => {
                 console.log("Error de compra");
@@ -43,44 +44,51 @@ const Cart = () => {
         <>
 
             {
-                cart.length == 0 ? <h1>No hay productos <Link to='/'>Buscar Productos</Link></h1>
+                cart.length === 0 ? <div className='row justify-content-center'><div className='col-6'><h1>No hay productos <Link to='/'><Button>Buscar Productos</Button></Link></h1></div></div>
                     : cart.map(prod => <ItemCart product={prod} />)
             }
-            <div className="row justify-content-center mb-4">
-                <div className='col-4'>
 
-                    <h4>
-                        Total:$ {precioFinal()}
-                    </h4>
 
-                </div>
-            </div>
-            <div className="row justify-content-center mb-4">
-                <div className='col-4'>
-                    <h4>Formulario de Compra</h4>
-                    <Form >
-                        <Form.Group className="mb-3" >
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control name="formName" value={form.formName} onChange={handleChange} type="text" placeholder="Enter name" />
-                        </Form.Group>
+            {
+                cart.length === 0 ? <></>
+                    : <>
+                        <div className="row justify-content-center mb-4">
+                            <div className='col-4 borderBox'>
+                                <h4 className=''>
+                                    Total:$ {precioFinal()}
+                                </h4>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center mb-4">
 
-                        <Form.Group className="mb-3">
-                            <Form.Label>Phone</Form.Label>
-                            <Form.Control name="formPhone" value={form.formPhone} onChange={handleChange} type="tel" placeholder="Enter phone" />
-                        </Form.Group>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control name="formEmail" value={form.formEmail} onChange={handleChange} type="email" placeholder="Enter email" />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
-                        </Form.Group>
-                        <Button variant="primary" onClick={() => comprar()} >
-                            Comprar
-                        </Button>
-                    </Form>
-                </div>
-            </div>
+                            <div className='col-4'>
+                                <h4>Formulario de Compra</h4>
+                                <Form >
+                                    <Form.Group className="mb-3" >
+                                        <Form.Label>Name</Form.Label>
+                                        <Form.Control name="formName" value={form.formName} onChange={handleChange} type="text" placeholder="Enter name" />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Phone</Form.Label>
+                                        <Form.Control name="formPhone" value={form.formPhone} onChange={handleChange} type="tel" placeholder="Enter phone" />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Email address</Form.Label>
+                                        <Form.Control name="formEmail" value={form.formEmail} onChange={handleChange} type="email" placeholder="Enter email" />
+                                        <Form.Text className="text-muted">
+                                            We'll never share your email with anyone else.
+                                        </Form.Text>
+                                    </Form.Group>
+                                    <Button variant="primary" onClick={() => comprar()} >
+                                        Comprar
+                                    </Button>
+                                </Form>
+                            </div>
+                        </div>
+                    </>
+            }
+
 
         </>
     )

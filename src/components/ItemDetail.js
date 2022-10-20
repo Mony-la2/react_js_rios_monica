@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => {
     return (
         <>
 
-            <Row className='justify-content-center ms-4 my-4'>
+            <Row className='justify-content-center ms-4 my-4 mb-4'>
                 <Card style={{ width: '22rem' }}>
                     <Card.Img variant="top" src={`${item.pictureUrl}`} />
                     <Card.Body>
@@ -31,11 +31,13 @@ const ItemDetail = ({ item }) => {
                     </Card.Body>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item>{item.model}</ListGroup.Item>
+                        <ListGroup.Item>$ {item.price}</ListGroup.Item>
                     </ListGroup>
                     {
                         count === 0 ?
                             <ItemCount stock="5" initial="1" onAdd={onAdd} />
-                            : <Link to='/Cart'>Terminar compra</Link>
+                            : <Link to='/Cart'><button className="mb-4 mt-4"
+                            >Terminar Compra</button></Link>
                     }
 
                 </Card>
